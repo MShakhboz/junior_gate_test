@@ -55,6 +55,17 @@ input[type='number'] {
   -moz-appearance: textfield;
 }
 
+.container {
+  width: 75%;
+  margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 88%;
+  }
+}
+
 
 
 .scrollStyle {
