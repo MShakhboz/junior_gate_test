@@ -1,6 +1,148 @@
 @use "styles/style" as *;
 
 .footer {
-  background-color: #444444;
-  color: green;
+  display: flex;
+  align-items: center;
+  height: 223px;
+  background-color: #475658;
+  margin-top: 128px;
+}
+
+.footer_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+}
+
+.logo {
+  width: 101px;
+  height: 111.64px;
+}
+
+.contacts {
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    li {
+      list-style: none;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 21px;
+      color: #FFFFFF;
+    }
+  }
+}
+
+.schedules {
+  ul {
+    li {
+      list-style: none;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 26px;
+      color: #FFFFFF;
+      .schedules_list {
+        margin-left: 32px;
+      }
+    }
+
+  }
+}
+
+.footer_address{
+  display: none;
+}
+
+.align_center {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  display: inline-block;
+  width: 18.95px;
+  height: 23.5px;
+  margin-right: 10px;
+}
+
+@media (max-width: 600px) { 
+  .footer {
+    height: 250px;
+    margin-top: 32px;
+  }
+  .logo {
+   display: none;
+  }
+
+  .footer_wrapper{
+    flex-direction: column;
+    align-items: initial;
+    padding: 0 8px;
+    height: 100%;
+  }
+
+  .icon {
+    width: 14px;
+    height: 14px;
+  }
+
+  .contacts {
+    ul {
+      border-bottom: 1px solid #BDBDBD;
+      padding: 25px 0;
+      width: 100%;
+      align-items: center;
+      margin: 0;
+      li {
+        font-size: 14px;
+        line-height: 19px;     
+      }
+    }
+  }
+
+  .schedules {
+    ul {
+      border-bottom: 1px solid #BDBDBD;
+      padding: 25px 0;
+      width: 100%;
+      text-align: center;
+      margin: 0;
+      li {
+        font-size: 14px;
+        line-height: 19px;     
+        .schedules_list {
+          margin-left: 32px;
+        }
+      }
+  
+    }
+  }
+
+  .footer_address{
+    display: block;
+   
+    ul {
+      padding: 25px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      text-align: center;
+      margin: 0;
+      li {
+        font-size: 14px;
+        line-height: 19px;    
+        color: #FFFFFF; 
+      }
+    }
+  }
+
+  .address_icon {
+    display: none;
+  }
+
 }
