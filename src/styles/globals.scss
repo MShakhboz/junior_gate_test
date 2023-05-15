@@ -60,6 +60,10 @@ input[type='number'] {
   margin: 0 auto;
 }
 
+.height_100{
+  height: 100%; 
+}
+
 @media (max-width: 600px) {
   .container {
     width: 88%;

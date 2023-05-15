@@ -12,6 +12,10 @@ export interface HeaderProps {
   classNames?: string
 }
 
+const menu = ['Как продать квартиру', 'Истории клиентов']
+const phoneNumber = '+ 7 495 835 47 11'
+const callButton = 'Перезвоните мне'
+
 export const Header: FC<HeaderProps> = ({ classNames }) => {
   return (
     <div className={cn(s.header, classNames)}>
@@ -21,20 +25,21 @@ export const Header: FC<HeaderProps> = ({ classNames }) => {
         </div>
         <div className={s.menu}>
           <ul>
-            <li>Как продать квартиру</li>
-            <li>Истории клиентов</li>
+            {menu.map((item, index) => (
+              <li key={index + 1}>{item}</li>
+            ))}
             <li className={s.phone_numb}>
               <span className={s.phone_icon}>
                 <Image src={phone} alt='phone' />
               </span>
-              + 7 495 835 47 11
+              {phoneNumber}
             </li>
             <li>
               <Button
                 onClick={() => console.log('Перезвоните мне')}
                 classNames={s.button_call}
               >
-                Перезвоните мне
+                {callButton}
               </Button>
             </li>
           </ul>
