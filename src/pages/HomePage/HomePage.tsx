@@ -45,7 +45,7 @@ export const HomePage: FC = () => {
               </Button>
             </div>
             <div className={s.box_second}>
-              <Image src={building} alt='building' className={s.building_img} />
+              {/* <Image src={building} alt='building' className={s.building_img} /> */}
             </div>
           </div>
         </div>
